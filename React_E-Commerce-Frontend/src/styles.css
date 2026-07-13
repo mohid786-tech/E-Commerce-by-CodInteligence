@@ -1,0 +1,245 @@
+:root {
+  --peach-light: #ffe8dc;
+  --peach-soft: #ffd4c4;
+  --peach-rich: #ffb89c;
+  --peach-dark: #d27666;
+  --text-dark: #3a2a20;
+}
+
+html, body, #root {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #fff4ee 0%, #ffe5d7 45%, #f7d5c6 100%);
+  color: var(--text-dark);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  background: rgba(255, 245, 239, 0.96) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link,
+.navbar .btn {
+  color: var(--text-dark) !important;
+}
+
+.navbar .btn-outline-dark {
+  border-color: rgba(58, 42, 32, 0.35);
+  color: var(--text-dark);
+}
+
+.hero-page {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.hero-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.36), transparent 45%);
+  pointer-events: none;
+}
+
+.three-hero-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 1rem;
+  max-width: 960px;
+}
+
+.hero-content .eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.65rem 1.3rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  color: #c85d3b;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.03;
+  margin-bottom: 1rem;
+  color: #3d2316;
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  color: #5a3c2a;
+}
+
+.hero-buttons .btn {
+  margin: 0.35rem;
+  padding: 1rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.btn-peach,
+.btn-outline-peach {
+  border-radius: 999px;
+}
+
+.btn-peach {
+  background: linear-gradient(135deg, #ffbfa9 0%, #ff8f6d 100%);
+  border: none;
+  color: white;
+}
+
+.btn-peach:hover,
+.btn-peach:focus {
+  background: linear-gradient(135deg, #ff9e83 0%, #f5714c 100%);
+  color: white;
+}
+
+.btn-outline-peach {
+  border: 1px solid rgba(255, 112, 86, 0.8);
+  background: transparent;
+  color: var(--peach-dark);
+}
+
+.btn-outline-peach:hover,
+.btn-outline-peach:focus {
+  background: rgba(255, 232, 220, 0.94);
+  color: var(--peach-dark);
+}
+
+.page-section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  margin-bottom: 2rem;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  color: #4a2c1f;
+}
+
+.section-subtitle {
+  color: #6b4a40;
+  margin-bottom: 2.75rem;
+}
+
+.product-card {
+  background: linear-gradient(180deg, rgba(255, 245, 240, 0.96), rgba(255, 229, 217, 0.96));
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 28px 60px rgba(143, 81, 56, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 34px 76px rgba(143, 81, 56, 0.16);
+}
+
+.product-card .card-img-top {
+  object-fit: contain;
+  height: 320px;
+  background: rgba(255, 255, 255, 0.9);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.product-card .card-body {
+  padding: 1.6rem;
+}
+
+.product-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3f2720;
+}
+
+.product-card .card-text {
+  color: #6d4a3c;
+  font-size: 0.95rem;
+  min-height: 3rem;
+}
+
+.product-card ul {
+  background: transparent;
+}
+
+.product-card .list-group-item {
+  border: none;
+  padding: 0.85rem 1.6rem;
+  font-weight: 700;
+  color: #4b2f23;
+}
+
+.product-card .card-body .btn {
+  min-width: 120px;
+}
+
+.form-card {
+  background: rgba(255, 255, 255, 0.88);
+  border: none;
+  border-radius: 28px;
+  padding: 2rem;
+  box-shadow: 0 24px 50px rgba(125, 79, 48, 0.12);
+}
+
+.form-control,
+.form-select {
+  border-radius: 16px;
+  border: 1px solid rgba(180, 128, 101, 0.35);
+  background: rgba(255, 250, 247, 0.96);
+  padding: 1rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 179, 148, 0.25);
+  border-color: #ffb59a;
+}
+
+label {
+  font-weight: 600;
+  color: #5d3b2d;
+}
+
+.bg-light {
+  background: rgba(255, 253, 250, 0.95) !important;
+}
+
+footer {
+  background: transparent;
+  padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 2rem 1rem;
+  }
+  .hero-buttons .btn {
+    width: 100%;
+  }
+  .product-card .card-img-top {
+    height: 260px;
+  }
+}
